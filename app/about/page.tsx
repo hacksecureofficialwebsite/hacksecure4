@@ -139,7 +139,7 @@ export default function AboutUs() {
               className="relative h-[400px] rounded-lg overflow-hidden"
             >
               <Image
-                src="/discord.jpg"
+                src="/discord.png"
                 alt="Our values illustration"
                 fill
                 className="object-cover"
