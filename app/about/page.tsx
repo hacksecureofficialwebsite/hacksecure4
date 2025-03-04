@@ -28,15 +28,10 @@ const slideIn = {
 export default function AboutUs() {
   return (
     <div className="min-h-screen bg-cover bg-center text-white relative" style={{ backgroundImage: "url('/hacksec_background1.png')" }}>
-      {/* Background Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-
-      {/* Content Wrapper */}
       <div className="relative z-10">
-        {/* Navbar */}
         <Navbar />
 
-        {/* Hero Section */}
         <motion.section 
           initial="hidden"
           whileInView="visible"
@@ -52,7 +47,6 @@ export default function AboutUs() {
           </div>
         </motion.section>
 
-        {/* Story Section */}
         <section className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div 
@@ -63,34 +57,27 @@ export default function AboutUs() {
               className="space-y-6"
             >
               <h2 className="text-3xl md:text-4xl font-bold">Our Mission</h2>
-              <p className="text-gray-300">
-                1.) Provide relevant and effective training solutions.
-              </p>
-              <p className="text-gray-300">
-                2.) Security Awareness ensuring a more secure digital world for everyone.
-              </p>
-              <p className="text-gray-300">
-                3.) Providing services with the best quality and competitive prices.
-              </p>
+              <p className="text-gray-300">Provide relevant and effective training solutions.</p>
+              <p className="text-gray-300">Security Awareness ensuring a more secure digital world for everyone.</p>
+              <p className="text-gray-300">Providing services with the best quality and competitive prices.</p>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative h-[400px] rounded-lg overflow-hidden"
+              className="relative h-[400px] w-full rounded-lg overflow-hidden"
             >
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-3az2qEzO5WP7LUJK9b5EtXmuomEUXi.jpeg"
                 alt="Our mission illustration"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </motion.div>
           </div>
         </section>
 
-        {/* Partners Section */}
         <motion.section 
           initial="hidden"
           whileInView="visible"
@@ -110,12 +97,12 @@ export default function AboutUs() {
               >
                 <Card className="bg-gray-900 border-gray-800">
                   <CardContent className="p-6 space-y-4">
-                    <div className="relative h-48 rounded-lg overflow-hidden">
+                    <div className="relative h-48 w-full rounded-lg overflow-hidden">
                       <Image
                         src="/placeholder.svg?height=200&width=300"
                         alt={partner}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                     <h3 className="text-xl font-bold">{partner}</h3>
@@ -129,7 +116,6 @@ export default function AboutUs() {
           </div>
         </motion.section>
 
-        {/* Values Section */}
         <section className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div 
@@ -137,13 +123,13 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative h-[400px] rounded-lg overflow-hidden"
+              className="relative h-[400px] w-full rounded-lg overflow-hidden"
             >
               <Image
                 src="/discord.png"
                 alt="Our values illustration"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </motion.div>
             <motion.div 
@@ -155,17 +141,9 @@ export default function AboutUs() {
             >
               <h2 className="text-3xl md:text-4xl font-bold">Our Values</h2>
               <p className="text-gray-300">
-                At our core, we value transparency, innovation, and sustainability. 
-                We're committed to creating positive change in our industry while 
-                building lasting relationships with our partners and customers. 
-                Together, we're shaping a future that we can all be proud of.
+                At our core, we value transparency, innovation, and sustainability. We're committed to creating positive change in our industry while building lasting relationships with our partners and customers.
               </p>
-              {/* Discord Button */}
-              <a 
-                href="https://discord.com/invite/Bwjj86c3" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
+              <a href="https://discord.com/invite/Bwjj86c3" target="_blank" rel="noopener noreferrer">
                 <Button className="mt-4 px-6 py-3 text-lg bg-blue-600 hover:bg-blue-700 transition duration-300">
                   Join Our Discord
                 </Button>
@@ -174,7 +152,6 @@ export default function AboutUs() {
           </div>
         </section>
 
-        {/* Footer */}
         <Footer />
       </div>
     </div>
