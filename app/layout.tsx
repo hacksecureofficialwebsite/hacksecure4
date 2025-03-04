@@ -10,7 +10,7 @@ const playfair = Playfair_Display({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Fluid Simulation",
+  title: "HackSecure",
   description: "WebGL Fluid Simulation using Next.js",
 };
 
