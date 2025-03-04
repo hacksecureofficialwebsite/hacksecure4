@@ -56,7 +56,7 @@ export default function Footer() {
             <span className="sr-only">LinkedIn</span>
           </Link>
           <Link href="https://discord.gg/Bwjj86c3" target="_blank" className="hover:text-gray-300">
-            <Linkedin size={24} />
+            <Discord size={24} />
             <span className="sr-only">Discord</span>
           </Link>
         </div>
