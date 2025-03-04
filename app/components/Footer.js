@@ -36,8 +36,8 @@ export default function Footer() {
           {/* Company Section */}
           <div>
             <h4 className="text-lg font-semibold mb-2">Company</h4>
-            <Link href="/about-us" className="block text-gray-400 hover:text-gray-300">About Us</Link>
-            <Link href="/contact-us" className="block text-gray-400 hover:text-gray-300">Contact Us</Link>
+            <Link href="/about" className="block text-gray-400 hover:text-gray-300">About Us</Link>
+            
           </div>
 
           {/* Resources Section */}
