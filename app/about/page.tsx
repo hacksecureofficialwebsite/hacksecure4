@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import { Button } from "@/components/ui/button"
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -46,7 +47,7 @@ export default function AboutUs() {
           <h1 className="text-4xl md:text-6xl font-bold text-center mb-8">About Us</h1>
           <div className="max-w-3xl mx-auto text-center text-gray-300">
             <p className="text-lg md:text-xl mb-8">
-              HACK SEC focuses on empowering individuals and businesses with top-tier cybersecurity skills. We provide hands-on training and practical solutions tailored to meet the unique challenges of the digital world, helping you secure the future with confidence.
+              HACK SEC focuses on empowering individuals and businesses with top-tier cybersecurity skills. We provide hands-on training and practical solutions tailored to meet the unique challenges of the digital world, helping you secure the future of with confidence. We provide a hands-on training and practical solution tailored to meet the unique challenges of the digital world, helping you secure the fututre with confidence.
             </p>
           </div>
         </motion.section>
@@ -62,11 +63,15 @@ export default function AboutUs() {
               className="space-y-6"
             >
               <h2 className="text-3xl md:text-4xl font-bold">Our Mission</h2>
-              <ul className="text-gray-300 list-disc pl-6">
-                <li>Provide relevant and effective training solutions.</li>
-                <li>Security Awareness ensuring a more secure digital world for everyone.</li>
-                <li>Providing services with the best quality and competitive prices.</li>
-              </ul>
+              <p className="text-gray-300">
+                1.) Provide relevant and effective training solutions.
+              </p>
+              <p className="text-gray-300">
+                2.) Security Awareness ensuring a more secure digital world for everyone.
+              </p>
+              <p className="text-gray-300">
+                3.) Providing services with the best quality and competitive prices.
+              </p>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
@@ -85,6 +90,45 @@ export default function AboutUs() {
           </div>
         </section>
 
+        {/* Partners Section */}
+        <motion.section 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className="container mx-auto px-4 py-16 md:py-24"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Partners</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {["Strategic Partner", "Technology Partner", "Sustainability Partner"].map((partner, index) => (
+              <motion.div
+                key={partner}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 * (index + 1) }}
+              >
+                <Card className="bg-gray-900 border-gray-800">
+                  <CardContent className="p-6 space-y-4">
+                    <div className="relative h-48 rounded-lg overflow-hidden">
+                      <Image
+                        src="/placeholder.svg?height=200&width=300"
+                        alt={partner}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="text-xl font-bold">{partner}</h3>
+                    <p className="text-gray-300">
+                      {`Leading ${partner.toLowerCase()} initiatives with a focus on growth and sustainability.`}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
         {/* Values Section */}
         <section className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -93,7 +137,7 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative h-[400px] rounded-lg overflow-hidden flex justify-center"
+              className="relative h-[400px] rounded-lg overflow-hidden"
             >
               <Image
                 src="/discord.png"
@@ -109,10 +153,14 @@ export default function AboutUs() {
               variants={slideIn}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-bold">Discord Community</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Our Values</h2>
               <p className="text-gray-300">
-                Welcome to HACK SECURE, our brand-new Discord community designed for ethical hackers, cybersecurity professionals, and tech enthusiasts! Here, you’ll find a thriving space to learn, connect, and grow.
+                At our core, we value transparency, innovation, and sustainability. 
+                We're committed to creating positive change in our industry while 
+                building lasting relationships with our partners and customers. 
+                Together, we're shaping a future that we can all be proud of.
               </p>
+              <Button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg">Learn More</Button>
             </motion.div>
           </div>
         </section>
