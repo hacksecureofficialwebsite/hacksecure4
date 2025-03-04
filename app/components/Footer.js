@@ -29,7 +29,7 @@ export default function Footer() {
           {/* Products Section */}
           <div>
             <h4 className="text-lg font-semibold mb-2">Products</h4>
-            <Link href="/courses" className="block text-gray-400 hover:text-gray-300">Courses</Link>
+            <Link href="/coming-soon" className="block text-gray-400 hover:text-gray-300">Courses</Link>
             
           </div>
 
