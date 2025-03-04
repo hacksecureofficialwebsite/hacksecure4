@@ -47,7 +47,7 @@ export default function AboutUs() {
           <h1 className="text-4xl md:text-6xl font-bold text-center mb-8">About Us</h1>
           <div className="max-w-3xl mx-auto text-center text-gray-300">
             <p className="text-lg md:text-xl mb-8">
-              HACK SEC focuses on empowering individuals and businesses with top-tier cybersecurity skills. We provide hands-on training and practical solutions tailored to meet the unique challenges of the digital world, helping you secure the future of with confidence. We provide a hands-on training and practical solution tailored to meet the unique challenges of the digital world, helping you secure the fututre with confidence.
+              HACK SEC focuses on empowering individuals and businesses with top-tier cybersecurity skills. We provide hands-on training and practical solutions tailored to meet the unique challenges of the digital world, helping you secure the future with confidence.
             </p>
           </div>
         </motion.section>
@@ -143,7 +143,7 @@ export default function AboutUs() {
                 src="/discord.png"
                 alt="Our values illustration"
                 fill
-                className="object-contain"
+                className="object-cover"
               />
             </motion.div>
             <motion.div 
@@ -160,7 +160,16 @@ export default function AboutUs() {
                 building lasting relationships with our partners and customers. 
                 Together, we're shaping a future that we can all be proud of.
               </p>
-              <Button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg">Learn More</Button>
+              {/* Discord Button */}
+              <a 
+                href="https://discord.gg/your-discord-link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button className="mt-4 px-6 py-3 text-lg bg-blue-600 hover:bg-blue-700 transition duration-300">
+                  Join Our Discord
+                </Button>
+              </a>
             </motion.div>
           </div>
         </section>
