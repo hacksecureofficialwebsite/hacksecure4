@@ -30,8 +30,8 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-2">Products</h4>
             <Link href="/courses" className="block text-gray-400 hover:text-gray-300">Courses</Link>
-            <Link href="/job-board" className="block text-gray-400 hover:text-gray-300">Job Board</Link>
-            <Link href="/coming-soon" className="block text-gray-400 hover:text-gray-300">VIP</Link>
+            //<Link href="/job-board" className="block text-gray-400 hover:text-gray-300">Job Board</Link>
+            //<Link href="/coming-soon" className="block text-gray-400 hover:text-gray-300">VIP</Link>
           </div>
 
           {/* Company Section */}
@@ -45,7 +45,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-2">Resources</h4>
             <Link href="/blog" className="block text-gray-400 hover:text-gray-300">Blog</Link>
-            <Link href="/coming-soon" className="block text-gray-400 hover:text-gray-300">Career Opportunity</Link>
+            //<Link href="/coming-soon" className="block text-gray-400 hover:text-gray-300">Career Opportunity</Link>
           </div>
         </div>
 
