@@ -139,7 +139,7 @@ export default function AboutUs() {
               className="relative h-[400px] rounded-lg overflow-hidden"
             >
               <Image
-                src="/hacksec_neon.jpg"
+                src="/discord.jpg"
                 alt="Our values illustration"
                 fill
                 className="object-cover"
