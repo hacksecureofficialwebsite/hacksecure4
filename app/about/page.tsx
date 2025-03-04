@@ -162,7 +162,7 @@ export default function AboutUs() {
               </p>
               {/* Discord Button */}
               <a 
-                href="https://discord.gg/your-discord-link" 
+                href="https://discord.com/invite/Bwjj86c3" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
