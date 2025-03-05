@@ -15,13 +15,13 @@ export default function BlogPage() {
     },
     {
       title: "Understanding Ethical Hacking",
-      image: "/blog-image2.jpg",
+      image: "/hacksec.jpeg",
       description: "Ethical hacking is an essential skill for any security professional. Learn the basics and get started with ethical hacking techniques.",
       link: "/blog/understanding-ethical-hacking"
     },
     {
       title: "Top Tools for Penetration Testing",
-      image: "/blog-image3.jpg",
+      image: "/hacksec.jpeg",
       description: "Penetration testing tools are crucial in identifying and fixing security vulnerabilities. Explore the top tools every pen tester should know.",
       link: "/blog/top-tools-for-penetration-testing"
     }
