@@ -10,7 +10,7 @@ export default function BlogPage() {
       title: "How to Learn Cybersecurity",
       image: "/hacksec.jpeg",
       description: "A beginner's guide to understanding and learning cybersecurity concepts. Start your journey into the world of hacking and security.",
-      link: "/readmore1.js"
+      link: "app/blog/readmore1.js"
     },
     {
       title: "Understanding Ethical Hacking",
