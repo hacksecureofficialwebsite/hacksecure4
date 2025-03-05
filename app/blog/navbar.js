@@ -49,16 +49,10 @@ export default function Navbar() {
           <Link href="/coming-soon" onClick={(e) => handleLinkClick(e, '/courses')} className="hover:text-gray-300">Courses</Link>
           <Link href="/about" onClick={(e) => handleLinkClick(e, '/about')} className="hover:text-gray-300">About us</Link>
           <Link href="/contact" onClick={(e) => handleLinkClick(e, '/contact')} className="hover:text-gray-300">Contact us</Link>
-          {/* <Link href="/courses/payment" onClick={(e) => handleLinkClick(e, '/contact')} className="hover:text-gray-300">VIP</Link> */}
-          {/* <Link href="/coming-soon" onClick={(e) => handleLinkClick(e, '/contact')} className="hover:text-gray-300">VIP</Link> */}
-          {/* <Link href="/coming-soon" onClick={(e) => handleLinkClick(e, '/contact')} className="hover:text-gray-300">Career Opportunities</Link> */}
-          
-          {/* <Link href="http://localhost:3001" onClick={(e) => handleLinkClick(e, '/contact')} className="hover:text-gray-300">Labs & Challenges</Link> */}
           <Link href="/coming-soon" onClick={(e) => handleLinkClick(e, '/contact')} className="hover:text-gray-300">Achievements</Link>
-          
         </div>
         <div className="flex items-center space-x-4">
-          {user ? (
+          {user && (
             <>
               <span>Welcome, {user.name}</span>
               <Button 
@@ -68,14 +62,6 @@ export default function Navbar() {
               >
                 Logout
               </Button>
-            </>
-          ) : (
-            <>
-              <Link href="/signup">
-                <Button variant="outline" className="bg-black text-white border-white hover:bg-white hover:text-black">
-                  Sign Up
-                </Button>
-              </Link>
             </>
           )}
         </div>
