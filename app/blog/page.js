@@ -1,36 +1,50 @@
-'use client';
+'use client'
 
-import Navbar from '../../navbar';
-import Footer from '../../footer';
+import Navbar from './navbar'
+import Footer from './footer'
+import Link from 'next/link'
 
-export default function BlogPost() {
+export default function BlogPage() {
+  const blogs = [
+    {
+      title: "How to Learn Cybersecurity",
+      image: "/hacksec.jpeg",
+      description: "A beginner's guide to understanding and learning cybersecurity concepts. Start your journey into the world of hacking and security.",
+      link: "/blog/how-to-learn-cybersecurity"
+    },
+    {
+      title: "Understanding Ethical Hacking",
+      image: "/blog-image2.jpg",
+      description: "Ethical hacking is an essential skill for any security professional. Learn the basics and get started with ethical hacking techniques.",
+      link: "/blog/understanding-ethical-hacking"
+    },
+    {
+      title: "Top Tools for Penetration Testing",
+      image: "/blog-image3.jpg",
+      description: "Penetration testing tools are crucial in identifying and fixing security vulnerabilities. Explore the top tools every pen tester should know.",
+      link: "/blog/top-tools-for-penetration-testing"
+    }
+  ];
+
   return (
     <div className="bg-black text-white min-h-screen">
       <Navbar />
       <div className="container mx-auto py-16">
-        <h1 className="text-4xl font-bold text-center mb-6">Top Tools for Penetration Testing</h1>
-        <div className="flex justify-center mb-6">
-          <img src="/pentesting-tools.jpg" alt="Penetration Testing Tools" className="rounded-lg shadow-lg w-full max-w-3xl" />
+        <h1 className="text-4xl font-bold text-center mb-12">Latest Blogs</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {blogs.map((blog, index) => (
+            <div key={index} className="bg-gray-800 p-6 rounded-lg">
+              <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover rounded-lg mb-4" />
+              <h2 className="text-2xl font-semibold mb-2">{blog.title}</h2>
+              <p className="text-gray-400 mb-4">{blog.description}</p>
+              <Link href={blog.link} legacyBehavior>
+                <a className="bg-black text-white font-bold py-2 px-6 rounded-full hover:bg-gray-700 transition duration-300">
+                  Read Now
+                </a>
+              </Link>
+            </div>
+          ))}
         </div>
-        <p className="text-gray-300 text-lg leading-relaxed mb-4">
-          Penetration testing, or ethical hacking, is a practice used to evaluate the security of a system by simulating cyberattacks.
-          It helps identify and fix security vulnerabilities before malicious hackers can exploit them. To conduct effective penetration tests,
-          professionals rely on specialized tools that help in various aspects of security testing.
-        </p>
-        <p className="text-gray-300 text-lg leading-relaxed mb-4">
-          Some of the most widely used penetration testing tools include:
-        </p>
-        <ul className="list-disc list-inside text-gray-300 mb-4">
-          <li><strong>Metasploit</strong> - A powerful framework for developing and executing exploits.</li>
-          <li><strong>Burp Suite</strong> - A widely used tool for web application security testing.</li>
-          <li><strong>Nmap</strong> - A network scanning tool to discover hosts and services.</li>
-          <li><strong>Wireshark</strong> - A network protocol analyzer for traffic inspection.</li>
-          <li><strong>John the Ripper</strong> - A fast password-cracking tool.</li>
-        </ul>
-        <p className="text-gray-300 text-lg leading-relaxed">
-          These tools play a crucial role in ethical hacking and cybersecurity assessments. Understanding how to use them effectively
-          can greatly enhance an individual's ability to detect and mitigate potential security threats.
-        </p>
       </div>
       <Footer />
     </div>
