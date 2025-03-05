@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import Navbar from './navbar'
-import Footer from './footer'
-import Link from 'next/link'
+import Navbar from '../../navbar';
+import Footer from '../../footer';
+import Link from 'next/link';
 
 export default function BlogPage() {
   const blogs = [
@@ -10,7 +10,7 @@ export default function BlogPage() {
       title: "How to Learn Cybersecurity",
       image: "/hacksec.jpeg",
       description: "A beginner's guide to understanding and learning cybersecurity concepts. Start your journey into the world of hacking and security.",
-      link: "app/blog/readmore1.js"
+      link: "/blog/readmore1.js"
     },
     {
       title: "Understanding Ethical Hacking",
@@ -37,10 +37,10 @@ export default function BlogPage() {
               <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover rounded-lg mb-4" />
               <h2 className="text-2xl font-semibold mb-2">{blog.title}</h2>
               <p className="text-gray-400 mb-4">{blog.description}</p>
-              <Link href={blog.link} legacyBehavior>
-                <a className="bg-black text-white font-bold py-2 px-6 rounded-full hover:bg-gray-700 transition duration-300">
-                  Read Now
-                </a>
+              <Link href={blog.link}>
+                <button className="bg-black text-white font-bold py-2 px-6 rounded-full hover:bg-gray-700 transition duration-300">
+                  Read More
+                </button>
               </Link>
             </div>
           ))}
