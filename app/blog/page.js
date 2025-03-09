@@ -9,7 +9,7 @@ export default function BlogPage() {
   const blogs = [
     {
       title: "How to Learn Cybersecurity",
-      image: "/blog-image1.jpg",
+      image: "public/learn.png",
       description: "A beginner's guide to understanding and learning cybersecurity concepts. Start your journey into the world of hacking and security.",
       link: "/blog/how-to-learn-cybersecurity"
     },
