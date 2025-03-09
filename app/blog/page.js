@@ -1,27 +1,29 @@
-'use client';
+'use client'
 
-import Navbar from '../../navbar';
-import Footer from '../../footer';
+import Navbar from './navbar'
+import Footer from './footer'
+
+import Link from 'next/link'
 
 export default function BlogPage() {
   const blogs = [
     {
       title: "How to Learn Cybersecurity",
-      image: "/hacksec.jpeg",
+      image: "/blog-image1.jpg",
       description: "A beginner's guide to understanding and learning cybersecurity concepts. Start your journey into the world of hacking and security.",
-      link: "https://medium.com/cybersecurity-learning"
+      link: "/blog/how-to-learn-cybersecurity"
     },
     {
       title: "Understanding Ethical Hacking",
       image: "/blog-image2.jpg",
       description: "Ethical hacking is an essential skill for any security professional. Learn the basics and get started with ethical hacking techniques.",
-      link: "https://medium.com/ethical-hacking-guide"
+      link: "/blog/understanding-ethical-hacking"
     },
     {
       title: "Top Tools for Penetration Testing",
       image: "/blog-image3.jpg",
       description: "Penetration testing tools are crucial in identifying and fixing security vulnerabilities. Explore the top tools every pen tester should know.",
-      link: "https://medium.com/penetration-testing-tools"
+      link: "/blog/top-tools-for-penetration-testing"
     }
   ];
 
@@ -35,4 +37,17 @@ export default function BlogPage() {
             <div key={index} className="bg-gray-800 p-6 rounded-lg">
               <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover rounded-lg mb-4" />
               <h2 className="text-2xl font-semibold mb-2">{blog.title}</h2>
-              <p className="text-gr
+              <p className="text-gray-400 mb-4">{blog.description}</p>
+              <Link href={blog.link}>
+                <button className="bg-black text-white font-bold py-2 px-6 rounded-full hover:bg-gray-700 transition duration-300">
+                  Read Now
+                </button>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+}
