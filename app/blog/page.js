@@ -8,9 +8,9 @@ import Link from 'next/link'
 export default function BlogPage() {
   const blogs = [
     {
-      title: "How to Learn Cybersecurity",
+      title: "The Mindset of Cybercriminals",
       image: "/blog1.png",
-      description: "A beginner's guide to understanding and learning cybersecurity concepts. Start your journey into the world of hacking and security.",
+      description: "cyber criminology is to delve deeper into the psychology and theories behind why people commit cybercrimes, and how we can understand and combat this growing threat.",
       link: "https://medium.com/@hacksecure.official"
     },
     {
