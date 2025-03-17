@@ -1,144 +1,50 @@
 'use client'
 
-import { useState } from 'react'
-import { useForm, ValidationError } from '@formspree/react';  // Import Formspree
-import Navbar from './navbar'  // Correct the import path
-import Footer from './footer'  // Correct the import path
+import Navbar from './navbar'
+import Footer from './footer'
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    subject: 'Contact Form Submission', // Default subject or set a custom subject
-  });
+import Link from 'next/link'
 
-  // Formspree form handling
-  const [state, handleSubmit] = useForm("xldgdago"); // Your Formspree form ID
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
+export default function BlogPage() {
+  const blogs = [
+    {
+      title: "How to Learn Cybersecurity",
+      image: "/blog-image1.jpg",
+      description: "A beginner's guide to understanding and learning cybersecurity concepts. Start your journey into the world of hacking and security.",
+      link: "/blog/how-to-learn-cybersecurity"
+    },
+    {
+      title: "Understanding Ethical Hacking",
+      image: "/blog-image2.jpg",
+      description: "Ethical hacking is an essential skill for any security professional. Learn the basics and get started with ethical hacking techniques.",
+      link: "/blog/understanding-ethical-hacking"
+    },
+    {
+      title: "Top Tools for Penetration Testing",
+      image: "/blog-image3.jpg",
+      description: "Penetration testing tools are crucial in identifying and fixing security vulnerabilities. Explore the top tools every pen tester should know.",
+      link: "/blog/top-tools-for-penetration-testing"
+    }
+  ];
 
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col">
+    <div className="bg-black text-white min-h-screen">
       <Navbar />
-      
-      {/* Success Banner */}
-      {state.succeeded && (
-        <div className="bg-green-500 text-white text-center py-4">
-          <p>Thank you for submitting your message!</p>
-        </div>
-      )}
-
-      <div className="container mx-auto p-8">
-        <h1 className="text-4xl font-bold text-center mb-6">HACK SEC</h1>
-
-        <div className="max-w-2xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
-          {!state.succeeded ? (
-            <form onSubmit={handleSubmit}>
-              {/* Name Field */}
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-lg font-semibold mb-2">Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  value={formData.name} 
-                  onChange={handleChange} 
-                  className="w-full p-3 bg-gray-700 text-white rounded-md"
-                  required
-                />
-              </div>
-              
-              {/* Email Field */}
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-lg font-semibold mb-2">Email Address</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  value={formData.email} 
-                  onChange={handleChange} 
-                  className="w-full p-3 bg-gray-700 text-white rounded-md"
-                  required
-                />
-                <ValidationError 
-                  prefix="Email" 
-                  field="email"
-                  errors={state.errors}
-                />
-              </div>
-
-              {/* Subject Field */}
-              <div className="mb-4">
-                <label htmlFor="subject" className="block text-lg font-semibold mb-2">Subject</label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  name="subject" 
-                  value={formData.subject} 
-                  onChange={handleChange} 
-                  className="w-full p-3 bg-gray-700 text-white rounded-md"
-                  required
-                />
-              </div>
-
-              {/* Message Field */}
-              <div className="mb-4">
-                <label htmlFor="message" className="block text-lg font-semibold mb-2">Message</label>
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  value={formData.message} 
-                  onChange={handleChange} 
-                  rows="4"
-                  className="w-full p-3 bg-gray-700 text-white rounded-md"
-                  required
-                />
-                <ValidationError 
-                  prefix="Message" 
-                  field="message"
-                  errors={state.errors}
-                />
-              </div>
-
-              {/* Submit Button */}
-              <div className="flex justify-center">
-                <button 
-                  type="submit" 
-                  className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-700 transition duration-300"
-                  disabled={state.submitting}
-                >
-                  Send Message
+      <div className="container mx-auto py-16">
+        <h1 className="text-4xl font-bold text-center mb-12">Latest Blogs</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {blogs.map((blog, index) => (
+            <div key={index} className="bg-gray-800 p-6 rounded-lg">
+              <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover rounded-lg mb-4" />
+              <h2 className="text-2xl font-semibold mb-2">{blog.title}</h2>
+              <p className="text-gray-400 mb-4">{blog.description}</p>
+              <Link href={blog.link}>
+                <button className="bg-black text-white font-bold py-2 px-6 rounded-full hover:bg-gray-700 transition duration-300">
+                  Read Now
                 </button>
-              </div>
-            </form>
-          ) : (
-            // After submission, show the "Thank you" message and the button to return
-            <div className="text-center">
-              <p className="text-lg font-semibold text-gray-300 mb-4">
-                Your message has been sent successfully. Thank you!
-              </p>
-              <button 
-                onClick={() => window.location.reload()} 
-                className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-700 transition duration-300"
-              >
-                Submit Another Message
-              </button>
+              </Link>
             </div>
-          )}
-          
-          {/* Contact Email Text */}
-          {!state.succeeded && (
-            <div className="mt-4 text-center text-lg text-gray-300">
-              <p>If you have any issues, contact directly at this email: <a href="mailto:indiedevadi@gmail.com" className="text-blue-400">indiedevadi@gmail.com</a></p>
-            </div>
-          )}
+          ))}
         </div>
       </div>
       <Footer />
