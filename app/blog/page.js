@@ -11,7 +11,7 @@ export default function BlogPage() {
       title: "How to Learn Cybersecurity",
       image: "/blog1.png",
       description: "A beginner's guide to understanding and learning cybersecurity concepts. Start your journey into the world of hacking and security.",
-      redirect: "medium.com/@hacksecure.official"
+      link: "https://medium.com/@hacksecure.official"
     },
     {
       title: "Understanding Ethical Hacking",
