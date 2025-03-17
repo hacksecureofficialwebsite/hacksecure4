@@ -136,7 +136,7 @@ export default function Contact() {
           {/* Contact Email Text */}
           {!state.succeeded && (
             <div className="mt-4 text-center text-lg text-gray-300">
-              <p>If you have any issues, contact directly at this email: <a href="mailto:indiedevadi@gmail.com" className="text-blue-400">indiedevadi@gmail.com</a></p>
+              <p>If you have any issues, contact directly at this email: <a href="mailto:hacksecure.info@gmail.com " className="text-blue-400">hacksecure.info@gmail.com </a></p>
             </div>
           )}
         </div>
