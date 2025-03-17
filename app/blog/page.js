@@ -11,7 +11,7 @@ export default function BlogPage() {
       title: "The Mindset of Cybercriminals",
       image: "/blog1.png",
       description: "cyber criminology is to delve deeper into the psychology and theories behind why people commit cybercrimes, and how we can understand and combat this growing threat.",
-      link: "https://medium.com/@hacksecure.official"
+      link: "https://shorturl.at/MLEXo"
     },
     {
       title: "Understanding Ethical Hacking",
