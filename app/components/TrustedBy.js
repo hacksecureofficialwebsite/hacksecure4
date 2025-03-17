@@ -33,7 +33,7 @@ export default function TrustedBy() {
     return () => clearInterval(scrollInterval)
   }, [])
 
-  const Trusted & Recognized On= [
+  const TrustedRecognized = [
     { name: "Company 1", logo: "/placeholder.svg" },
     { name: "Company 2", logo: "/placeholder.svg" },
     { name: "Company 3", logo: "/placeholder.svg" },
