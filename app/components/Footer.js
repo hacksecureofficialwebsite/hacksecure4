@@ -50,19 +50,15 @@ export default function Footer() {
 
         {/* Social Links */}
         <div className="flex space-x-4">
-          <Link href="https://www.facebook.com/yourpage" target="_blank" className="hover:text-gray-300">
-            <Facebook size={24} />
-            <span className="sr-only">Facebook</span>
-          </Link>
-          <Link href="https://twitter.com/yourprofile" target="_blank" className="hover:text-gray-300">
+          <Link href="https://chat.whatsapp.com/EptI5vaR2ZVEUK7kBJQQHP" target="_blank" className="hover:text-gray-300">
             <Twitter size={24} />
-            <span className="sr-only">Twitter</span>
+            <span className="sr-only">Whatsapp</span>
           </Link>
-          <Link href="https://www.instagram.com/yourprofile" target="_blank" className="hover:text-gray-300">
+          <Link href="https://www.youtube.com/@hacksecureofficial" target="_blank" className="hover:text-gray-300">
             <Instagram size={24} />
-            <span className="sr-only">Instagram</span>
+            <span className="sr-only">Youtube</span>
           </Link>
-          <Link href="https://www.linkedin.com/company/hacksecureofficial/posts/?feedView=all" target="_blank" className="hover:text-gray-300">
+          <Link href="https://www.linkedin.com/company/hacksecureofficial/" target="_blank" className="hover:text-gray-300">
             <Linkedin size={24} />
             <span className="sr-only">LinkedIn</span>
           </Link>
