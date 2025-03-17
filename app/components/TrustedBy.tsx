@@ -42,7 +42,7 @@ export default function TrustedBy() {
   return (
     <section className="py-16 bg-gray-900">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Trusted By</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Trusted & Recognized</h2>
         <div 
           ref={scrollRef}
           className="overflow-hidden whitespace-nowrap"
