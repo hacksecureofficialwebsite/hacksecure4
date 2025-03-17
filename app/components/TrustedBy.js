@@ -51,7 +51,7 @@ export default function TrustedBy() {
             isTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Trusted By
+          Trusted & Recognized
         </h2>
         <div
           ref={logosRef}
