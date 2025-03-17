@@ -24,6 +24,7 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-4">
           <Link href="/coming-soon" className="hover:text-gray-300">Courses</Link>
           <Link href="/about" className="hover:text-gray-300">About us</Link>
+          <Link href="/contact" className="hover:text-gray-300">Contact Us</Link>
           <Link href="/coming-soon" className="hover:text-gray-300">Achievements</Link>
         </div>
       </div>
