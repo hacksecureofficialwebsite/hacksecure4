@@ -1,6 +1,6 @@
 'use client'
 
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Youtube, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 const Discord = ({ size = 24 }) => (
@@ -26,43 +26,31 @@ export default function Footer() {
 
         {/* Middle Section */}
         <div className="flex flex-col md:flex-row md:space-x-12 text-center mb-4 md:mb-0">
-          {/* Products Section */}
           <div>
             <h4 className="text-lg font-semibold mb-2">Products</h4>
             <Link href="/coming-soon" className="block text-gray-400 hover:text-gray-300">Courses</Link>
-            
           </div>
-
-          {/* Company Section */}
           <div>
             <h4 className="text-lg font-semibold mb-2">Company</h4>
             <Link href="/about" className="block text-gray-400 hover:text-gray-300">About Us</Link>
-            
           </div>
-
-          {/* Resources Section */}
           <div>
             <h4 className="text-lg font-semibold mb-2">Resources</h4>
             <Link href="/blog" className="block text-gray-400 hover:text-gray-300">Blog</Link>
-          
           </div>
         </div>
 
         {/* Social Links */}
         <div className="flex space-x-4">
-          <Link href="https://www.facebook.com/yourpage" target="_blank" className="hover:text-gray-300">
-            <Facebook size={24} />
-            <span className="sr-only">Facebook</span>
+          <Link href="https://chat.whatsapp.com/EptI5vaR2ZVEUK7kBJQQHP" target="_blank" className="hover:text-gray-300">
+            <MessageCircle size={24} />
+            <span className="sr-only">WhatsApp</span>
           </Link>
-          <Link href="https://twitter.com/yourprofile" target="_blank" className="hover:text-gray-300">
-            <Twitter size={24} />
-            <span className="sr-only">Twitter</span>
+          <Link href="https://www.youtube.com/@hacksecureofficial" target="_blank" className="hover:text-gray-300">
+            <Youtube size={24} />
+            <span className="sr-only">YouTube</span>
           </Link>
-          <Link href="https://www.instagram.com/yourprofile" target="_blank" className="hover:text-gray-300">
-            <Instagram size={24} />
-            <span className="sr-only">Instagram</span>
-          </Link>
-          <Link href="https://www.linkedin.com/company/hacksecureofficial/posts/?feedView=all" target="_blank" className="hover:text-gray-300">
+          <Link href="https://www.linkedin.com/company/hacksecureofficial/" target="_blank" className="hover:text-gray-300">
             <Linkedin size={24} />
             <span className="sr-only">LinkedIn</span>
           </Link>
