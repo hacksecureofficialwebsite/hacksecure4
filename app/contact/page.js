@@ -1,147 +1,65 @@
 'use client'
 
-import { useState } from 'react'
-import { useForm, ValidationError } from '@formspree/react';  // Import Formspree
-import Navbar from './navbar'  // Correct the import path
-import Footer from './footer'  // Correct the import path
+import { Facebook, Twitter, Instagram, Linkedin, Youtube, MessageCircle } from 'lucide-react';
+import Link from 'next/link';
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    subject: 'Contact Form Submission', // Default subject or set a custom subject
-  });
+const Discord = ({ size = 24 }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M20.317 4.369a19.933 19.933 0 00-4.885-1.515.075.075 0 00-.079.037c-.212.378-.453.868-.617 1.255a18.568 18.568 0 00-5.499 0c-.164-.387-.405-.877-.617-1.255a.077.077 0 00-.079-.037c-1.733.33-3.394.855-4.885 1.515a.07.07 0 00-.032.028C.533 9.056-.319 13.636.099 18.151a.082.082 0 00.031.056c2.052 1.507 4.042 2.422 5.999 3.025a.077.077 0 00.084-.028c.462-.631.873-1.3 1.226-1.999a.076.076 0 00-.041-.103 12.771 12.771 0 01-1.805-.859.076.076 0 01-.008-.126c.122-.091.244-.186.361-.282a.075.075 0 01.078-.01c3.797 1.732 7.892 1.732 11.682 0a.075.075 0 01.079.009c.117.096.239.191.361.282a.076.076 0 01-.008.126c-.577.371-1.179.656-1.805.859a.076.076 0 00-.041.103c.354.699.765 1.368 1.226 1.999a.077.077 0 00.084.028c1.958-.603 3.947-1.518 5.999-3.025a.082.082 0 00.031-.056c.425-4.515-.434-9.095-3.564-13.754a.07.07 0 00-.032-.028zM8.02 15.708c-1.2 0-2.188-1.093-2.188-2.436 0-1.342.968-2.437 2.188-2.437 1.22 0 2.188 1.095 2.188 2.437 0 1.343-.968 2.436-2.188 2.436zm7.961 0c-1.2 0-2.188-1.093-2.188-2.436 0-1.342.968-2.437 2.188-2.437s2.188 1.095 2.188 2.437c0 1.343-.968 2.436-2.188 2.436z" />
+  </svg>
+);
 
-  // Formspree form handling
-  const [state, handleSubmit] = useForm("xldgdago"); // Your Formspree form ID
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
+export default function Footer() {
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col">
-      <Navbar />
-      
-      {/* Success Banner */}
-      {state.succeeded && (
-        <div className="bg-green-500 text-white text-center py-4">
-          <p>Thank you for submitting your message!</p>
+    <footer className="bg-black text-white py-8 border-t border-gray-800">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        {/* Brand Name */}
+        <div className="mb-4 md:mb-0">
+          <Link href="/" className="text-2xl font-bold">HACK SEC</Link>
         </div>
-      )}
 
-      <div className="container mx-auto p-8">
-        <h1 className="text-4xl font-bold text-center mb-6">HACK SEC</h1>
+        {/* Middle Section */}
+        <div className="flex flex-col md:flex-row md:space-x-12 text-center mb-4 md:mb-0">
+          <div>
+            <h4 className="text-lg font-semibold mb-2">Products</h4>
+            <Link href="/coming-soon" className="block text-gray-400 hover:text-gray-300">Courses</Link>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-2">Company</h4>
+            <Link href="/about" className="block text-gray-400 hover:text-gray-300">About Us</Link>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-2">Resources</h4>
+            <Link href="/blog" className="block text-gray-400 hover:text-gray-300">Blog</Link>
+          </div>
+        </div>
 
-        <div className="max-w-2xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
-          {!state.succeeded ? (
-            <form onSubmit={handleSubmit}>
-              {/* Name Field */}
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-lg font-semibold mb-2">Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  value={formData.name} 
-                  onChange={handleChange} 
-                  className="w-full p-3 bg-gray-700 text-white rounded-md"
-                  required
-                />
-              </div>
-              
-              {/* Email Field */}
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-lg font-semibold mb-2">Email Address</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  value={formData.email} 
-                  onChange={handleChange} 
-                  className="w-full p-3 bg-gray-700 text-white rounded-md"
-                  required
-                />
-                <ValidationError 
-                  prefix="Email" 
-                  field="email"
-                  errors={state.errors}
-                />
-              </div>
-
-              {/* Subject Field */}
-              <div className="mb-4">
-                <label htmlFor="subject" className="block text-lg font-semibold mb-2">Subject</label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  name="subject" 
-                  value={formData.subject} 
-                  onChange={handleChange} 
-                  className="w-full p-3 bg-gray-700 text-white rounded-md"
-                  required
-                />
-              </div>
-
-              {/* Message Field */}
-              <div className="mb-4">
-                <label htmlFor="message" className="block text-lg font-semibold mb-2">Message</label>
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  value={formData.message} 
-                  onChange={handleChange} 
-                  rows="4"
-                  className="w-full p-3 bg-gray-700 text-white rounded-md"
-                  required
-                />
-                <ValidationError 
-                  prefix="Message" 
-                  field="message"
-                  errors={state.errors}
-                />
-              </div>
-
-              {/* Submit Button */}
-              <div className="flex justify-center">
-                <button 
-                  type="submit" 
-                  className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-700 transition duration-300"
-                  disabled={state.submitting}
-                >
-                  Send Message
-                </button>
-              </div>
-            </form>
-          ) : (
-            // After submission, show the "Thank you" message and the button to return
-            <div className="text-center">
-              <p className="text-lg font-semibold text-gray-300 mb-4">
-                Your message has been sent successfully. Thank you!
-              </p>
-              <button 
-                onClick={() => window.location.reload()} 
-                className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-700 transition duration-300"
-              >
-                Submit Another Message
-              </button>
-            </div>
-          )}
-          
-          {/* Contact Email Text */}
-          {!state.succeeded && (
-            <div className="mt-4 text-center text-lg text-gray-300">
-              <p>If you have any issues, contact directly at this email: <a href="mailto:hacksecure.info@gmail.com " className="text-blue-400">hacksecure.info@gmail.com </a></p>
-            </div>
-          )}
+        {/* Social Links */}
+        <div className="flex space-x-4">
+          <Link href="https://chat.whatsapp.com/EptI5vaR2ZVEUK7kBJQQHP" target="_blank" className="hover:text-gray-300">
+            <MessageCircle size={24} />
+            <span className="sr-only">WhatsApp</span>
+          </Link>
+          <Link href="https://www.youtube.com/@hacksecureofficial" target="_blank" className="hover:text-gray-300">
+            <Youtube size={24} />
+            <span className="sr-only">YouTube</span>
+          </Link>
+          <Link href="https://www.linkedin.com/company/hacksecureofficial/" target="_blank" className="hover:text-gray-300">
+            <Linkedin size={24} />
+            <span className="sr-only">LinkedIn</span>
+          </Link>
+          <Link href="https://discord.gg/Bwjj86c3" target="_blank" className="hover:text-gray-300">
+            <Discord size={24} />
+            <span className="sr-only">Discord</span>
+          </Link>
         </div>
       </div>
-      <Footer />
-    </div>
+    </footer>
   );
 }
