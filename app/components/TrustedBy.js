@@ -34,7 +34,7 @@ export default function TrustedBy() {
   }, [])
 
   const trustedBy = [
-    { name: "Company 1", logo: "/placeholder.svg" },
+    { name: "Company 1", logo: "/blog1.png" },
     { name: "Company 2", logo: "/placeholder.svg" },
     { name: "Company 3", logo: "/placeholder.svg" },
     { name: "Company 4", logo: "/placeholder.svg" },
