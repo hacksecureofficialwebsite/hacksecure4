@@ -141,9 +141,9 @@ export default function AboutUs() {
             >
               <h2 className="text-3xl md:text-4xl font-bold">Our Discord Community</h2>
               <p className="text-gray-300">
-                At our core, we value transparency, innovation, and sustainability. We're committed to creating positive change in our industry while building lasting relationships with our partners and customers.
+                our brand-new Discord community designed for ethical hackers, cybersecurity professionals, and tech enthusiasts! Here, you’ll find a thriving space to learn, connect, and grow.
               </p>
-              <a href="https://discord.com/invite/Bwjj86c3" target="_blank" rel="noopener noreferrer">
+              <a href="https://discord.gg/Nvj3ReQrjj" target="_blank" rel="noopener noreferrer">
                 <Button className="mt-4 px-6 py-3 text-lg bg-blue-600 hover:bg-blue-700 transition duration-300">
                   Join Our Discord
                 </Button>
