@@ -39,7 +39,7 @@ export default function AboutUs() {
           variants={fadeIn}
           className="container mx-auto px-4 py-16 md:py-24"
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-center mb-8">About Us</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-center mb-8">about us</h1>
           <div className="max-w-3xl mx-auto text-center text-gray-300">
             <p className="text-lg md:text-xl mb-8">
               HACK SEC focuses on empowering individuals and businesses with top-tier cybersecurity skills. We provide hands-on training and practical solutions tailored to meet the unique challenges of the digital world, helping you secure the future with confidence.
@@ -69,7 +69,7 @@ export default function AboutUs() {
               className="relative h-[400px] w-full rounded-lg overflow-hidden"
             >
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-3az2qEzO5WP7LUJK9b5EtXmuomEUXi.jpeg"
+                src="https://www.dropbox.com/scl/fi/p4wr3wz19p7bjjywfib6p/WEBINAR-POSTERS.png?rlkey=ob6qt58nx6l0tqgrrpclnh0ki&st=1rt64huh&dl=0"
                 alt="Our mission illustration"
                 fill
                 className="object-contain"
