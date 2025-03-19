@@ -139,7 +139,7 @@ export default function AboutUs() {
               variants={slideIn}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-bold">Our Values</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Our Discord Community</h2>
               <p className="text-gray-300">
                 At our core, we value transparency, innovation, and sustainability. We're committed to creating positive change in our industry while building lasting relationships with our partners and customers.
               </p>
