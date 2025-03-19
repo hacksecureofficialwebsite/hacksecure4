@@ -66,7 +66,7 @@ export default function TrustedBy() {
               {trustedBy.map((company, index) => (
                 <div key={index} className="inline-block mx-8">
                   <Image
-                    src={company.logo || "/placeholder.svg"}
+                    src={company.logo || "google2.png"}
                     alt={company.name}
                     width={100}
                     height={50}
