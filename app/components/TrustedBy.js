@@ -34,12 +34,14 @@ export default function TrustedBy() {
   }, [])
 
   const trustedBy = [
-    { name: "Company 1", logo: "/blog1.png" },
-    { name: "Company 2", logo: "/placeholder.svg" },
-    { name: "Company 3", logo: "/placeholder.svg" },
-    { name: "Company 4", logo: "/placeholder.svg" },
-    { name: "Company 5", logo: "/placeholder.svg" },
-    { name: "Company 6", logo: "/placeholder.svg" },
+    { name: "Company 1", logo: "/youtube.png" },
+    { name: "Company 2", logo: "/gov.png  " },
+    { name: "Company 3", logo: "/razorpay.webp" },
+    { name: "Company 4", logo: "/linkedin.webp" },
+    { name: "Company 5", logo: "/discord.webp" },
+    { name: "Company 6", logo: "/google.png" },
+    { name: "Company 6", logo: "/paypal.png" },
+    { name: "Company 6", logo: "/google2.png" },  
   ]
 
   return (
