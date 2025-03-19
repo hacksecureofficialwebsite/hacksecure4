@@ -1,48 +1,44 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import Image from "next/image"
-import { useScrollAnimation } from "@/utils/useScrollAnimation"
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import { useScrollAnimation } from "@/utils/useScrollAnimation";
 
 export default function TrustedBy() {
-  const scrollRef = useRef(null)
-  const [titleRef, isTitleVisible] = useScrollAnimation()
-  const [logosRef, isLogosVisible] = useScrollAnimation(0.2)
+  const scrollRef = useRef(null);
+  const [titleRef, isTitleVisible] = useScrollAnimation();
+  const [logosRef, isLogosVisible] = useScrollAnimation(0.2);
 
   useEffect(() => {
-    const scrollContainer = scrollRef.current
+    const scrollContainer = scrollRef.current;
     if (scrollContainer) {
-      const scrollContent = scrollContainer.firstElementChild
-      if (scrollContent) {
-        scrollContainer.appendChild(scrollContent.cloneNode(true))
-      }
+      const scrollContent = scrollContainer.firstElementChild.cloneNode(true);
+      scrollContainer.appendChild(scrollContent);
     }
 
     const scroll = () => {
       if (scrollContainer) {
         if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-          scrollContainer.scrollLeft = 0
+          scrollContainer.scrollLeft = 0;
         } else {
-          scrollContainer.scrollLeft += 1
+          scrollContainer.scrollLeft += 1;
         }
       }
-    }
+    };
 
-    const scrollInterval = setInterval(scroll, 20)
-
-    return () => clearInterval(scrollInterval)
-  }, [])
+    const scrollInterval = setInterval(scroll, 20);
+    return () => clearInterval(scrollInterval);
+  }, []);
 
   const trustedBy = [
-    { name: "Company 1", logo: "/youtube.png" },
-    { name: "Company 2", logo: "/gov.png  " },
-    { name: "Company 3", logo: "/razorpay.webp" },
-    { name: "Company 4", logo: "/linkedin.webp" },
-    { name: "Company 5", logo: "/discord.webp" },
-    { name: "Company 6", logo: "/google.png" },
-    { name: "Company 6", logo: "/paypal.png" },
-    { name: "Company 6", logo: "/google2.png" },  
-  ]
+    { name: "YouTube", logo: "/youtube.png" },
+    { name: "Gov", logo: "/gov.png" },
+    { name: "Razorpay", logo: "/razorpay.webp" },
+    { name: "LinkedIn", logo: "/linkedin.webp" },
+    { name: "Discord", logo: "/discord.webp" },
+    { name: "Google", logo: "/google.png" },
+    { name: "PayPal", logo: "/paypal.png" },
+  ];
 
   return (
     <section className="py-16 bg-black">
@@ -66,7 +62,7 @@ export default function TrustedBy() {
               {trustedBy.map((company, index) => (
                 <div key={index} className="inline-block mx-8">
                   <Image
-                    src={company.logo || "google2.png"}
+                    src={company.logo}
                     alt={company.name}
                     width={100}
                     height={50}
@@ -79,6 +75,5 @@ export default function TrustedBy() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
