@@ -49,7 +49,7 @@ export default function TrustedBy() {
             isTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Trusted & Recognized
+          Recognized & Trusted Worldwide On
         </h2>
         <div
           ref={logosRef}
