@@ -26,7 +26,7 @@ export default function Navbar() {
           <Link href="/about" className="hover:text-gray-300">About us</Link>
           <Link href="/coming-soon" className="hover:text-gray-300">Courses</Link>
           <Link href="/coming-soon" className="hover:text-gray-300">Certification</Link>
-          <Link href="/contact" className="hover:text-gray-300">Contact Us</Link>
+          <Link href="/contact" className="hover:text-gray-300">Contact us</Link>
         </div>
       </div>
     </nav>
