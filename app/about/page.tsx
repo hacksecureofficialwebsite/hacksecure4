@@ -68,12 +68,13 @@ export default function AboutUs() {
               transition={{ duration: 0.6 }}
               className="relative h-[400px] w-full rounded-lg overflow-hidden"
             >
-              <Image
-                src="https://www.dropbox.com/scl/fi/p4wr3wz19p7bjjywfib6p/WEBINAR-POSTERS.png?rlkey=ob6qt58nx6l0tqgrrpclnh0ki&st=1rt64huh&dl=0"
-                alt="Our mission illustration"
-                fill
-                className="object-contain"
-              />
+             <Image
+  src="/WEBINAR_POSTERS .png" // Assuming the image is placed in the "public" folder
+  alt="Our mission illustration"
+  fill
+  className="object-contain"
+/>
+
             </motion.div>
           </div>
         </section>
