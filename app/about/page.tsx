@@ -68,7 +68,7 @@ export default function AboutUs() {
               className="relative h-[400px] w-full rounded-lg overflow-hidden"
             >
               <Image
-                src="/WEBINAR-POSTERS .png" // Image from public folder
+                src="/WEBINAR_POSTERS .png" // Image from public folder
                 alt="Our mission illustration"
                 fill
                 className="object-contain"
