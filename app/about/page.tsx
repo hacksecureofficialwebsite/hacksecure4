@@ -1,7 +1,6 @@
 'use client'
 
 import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
@@ -39,7 +38,7 @@ export default function AboutUs() {
           variants={fadeIn}
           className="container mx-auto px-4 py-16 md:py-24"
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-center mb-8">about us</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-center mb-8">About Us</h1>
           <div className="max-w-3xl mx-auto text-center text-gray-300">
             <p className="text-lg md:text-xl mb-8">
               HACK SEC focuses on empowering individuals and businesses with top-tier cybersecurity skills. We provide hands-on training and practical solutions tailored to meet the unique challenges of the digital world, helping you secure the future with confidence.
@@ -68,54 +67,15 @@ export default function AboutUs() {
               transition={{ duration: 0.6 }}
               className="relative h-[400px] w-full rounded-lg overflow-hidden"
             >
-             <Image
-  src="/WEBINAR_POSTERS .png" // Assuming the image is placed in the "public" folder
-  alt="Our mission illustration"
-  fill
-  className="object-contain"
-/>
-
+              <Image
+                src="/WEBINAR-POSTERS.png" // Image from public folder
+                alt="Our mission illustration"
+                fill
+                className="object-contain"
+              />
             </motion.div>
           </div>
         </section>
-
-        <motion.section 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-          className="container mx-auto px-4 py-16 md:py-24"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Partners</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {["Strategic Partner", "Technology Partner", "Sustainability Partner"].map((partner, index) => (
-              <motion.div
-                key={partner}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 * (index + 1) }}
-              >
-                <Card className="bg-gray-900 border-gray-800">
-                  <CardContent className="p-6 space-y-4">
-                    <div className="relative h-48 w-full rounded-lg overflow-hidden">
-                      <Image
-                        src="/placeholder.svg?height=200&width=300"
-                        alt={partner}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <h3 className="text-xl font-bold">{partner}</h3>
-                    <p className="text-gray-300">
-                      {`Leading ${partner.toLowerCase()} initiatives with a focus on growth and sustainability.`}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
 
         <section className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -142,7 +102,7 @@ export default function AboutUs() {
             >
               <h2 className="text-3xl md:text-4xl font-bold">Our Discord Community</h2>
               <p className="text-gray-300">
-                our brand-new Discord community designed for ethical hackers, cybersecurity professionals, and tech enthusiasts! Here, you’ll find a thriving space to learn, connect, and grow.
+                Our brand-new Discord community is designed for ethical hackers, cybersecurity professionals, and tech enthusiasts! Here, you’ll find a thriving space to learn, connect, and grow.
               </p>
               <a href="https://discord.gg/Nvj3ReQrjj" target="_blank" rel="noopener noreferrer">
                 <Button className="mt-4 px-6 py-3 text-lg bg-blue-600 hover:bg-blue-700 transition duration-300">
