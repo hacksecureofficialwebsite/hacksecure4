@@ -59,6 +59,10 @@ export default function Footer() {
             <Discord size={24} />
             <span className="sr-only">Discord</span>
           </Link>
+          <Link href="https://twitter.com/hacksecurex" target="_blank" className="hover:text-gray-300">
+            <Twitter size={24} />
+            <span className="sr-only">X</span>
+          </Link>
         </div>
       </div>
     </footer>
