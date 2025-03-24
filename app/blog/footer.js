@@ -33,7 +33,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-2">Company</h4>
             <Link href="/about" className="block text-gray-400 hover:text-gray-300">About Us</Link>
-            <Link href="/contact" className="block text-gray-400 hover:text-gray-300">Contact Us</Link>
+          <Link href="/contact" className="block text-gray-400 hover:text-gray-300">Contact Us</Link>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-2">Resources</h4>
@@ -58,6 +58,10 @@ export default function Footer() {
           <Link href="https://discord.gg/Nvj3ReQrjj" target="_blank" className="hover:text-gray-300">
             <Discord size={24} />
             <span className="sr-only">Discord</span>
+          </Link>
+          <Link href="https://twitter.com/hacksecurex" target="_blank" className="hover:text-gray-300">
+            <Twitter size={24} />
+            <span className="sr-only">X</span>
           </Link>
         </div>
       </div>
