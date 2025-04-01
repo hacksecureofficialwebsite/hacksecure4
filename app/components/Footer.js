@@ -38,6 +38,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-2">Resources</h4>
             <Link href="/blog" className="block text-gray-400 hover:text-gray-300">Blog</Link>
+          <Link href="https://cyberquiz-smoky.vercel.app/" className="block text-gray-400 hover:text-gray-300">Quiz</Link>
           </div>
         </div>
 
