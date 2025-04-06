@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* ✅ Add Vercel Analytics script */}
+        <Analytics />
         <Script
           src="https://vercel.com/analytics/script.js"
           strategy="lazyOnload"
