@@ -1,6 +1,5 @@
 import { Playfair_Display, Inter } from "next/font/google";
 import type React from "react";
-import Script from "next/script"; // ✅ import Script
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -22,16 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <Analytics />
-        <Script
-          src="https://vercel.com/analytics/script.js"
-          strategy="lazyOnload"
-        />
-      </head>
-      <body className={`${playfair.variable} ${inter.className}`}>
-        {children}
-      </body>
-    </html>
-  );
+      <body className={${playfair.variable} ${inter.className}}>{children}</body>
+    </html>
+  );
 }
