@@ -1,5 +1,5 @@
 import { Playfair_Display, Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react"; // ✅ Added Analytics
+import { Analytics } from "@vercel/analytics/react";
 import type React from "react";
 import "./globals.css";
 
@@ -35,9 +35,19 @@ export default function RootLayout({
         ></script>
       </head>
       <body className={`${playfair.variable} ${inter.className}`}>
+        {/* ✅ HackSecure Logo */}
+        <div style={{ textAlign: "center", paddingTop: "1rem" }}>
+          <img
+            src="/hacksec_logo.jpeg"
+            alt="HackSecure Logo"
+            style={{ maxWidth: "150px", height: "auto" }}
+          />
+        </div>
+
+        {/* ✅ Your main content including the Earth icon will appear below the logo */}
         {children}
 
-        {/* ✅ Analytics component goes here */}
+        {/* ✅ Vercel Analytics */}
         <Analytics />
       </body>
     </html>
