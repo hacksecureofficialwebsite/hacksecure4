@@ -34,8 +34,8 @@ export default function RootLayout({
         ></script>
 
         {/* ✅ Favicon using PNG version of hacksec_logo */}
-        <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png" />
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="icon" href="/hacksec_logo.jpeg" sizes="32x32" type="image/png" />
+        <link rel="shortcut icon" href="/hacksec_logo.jpeg" type="image/png" />
       </head>
       <body className={`${playfair.variable} ${inter.className}`}>
         {children}
