@@ -12,6 +12,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+// Metadata
 export const metadata = {
   title: "HackSecure",
   description: "WebGL Fluid Simulation using Next.js",
@@ -32,8 +33,9 @@ export default function RootLayout({
           crossOrigin="anonymous"
         ></script>
 
-        {/* ✅ Custom favicon (hacksec_logo.jpeg) */}
-        <link rel="icon" href="/hacksec_logo.jpeg" type="image/jpeg" />
+        {/* ✅ Favicon using PNG version of hacksec_logo */}
+        <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={`${playfair.variable} ${inter.className}`}>
         {children}
