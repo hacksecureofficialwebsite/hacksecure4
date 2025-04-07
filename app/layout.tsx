@@ -16,9 +16,6 @@ const inter = Inter({
 export const metadata = {
   title: "HackSecure",
   description: "WebGL Fluid Simulation using Next.js",
-  icons: {
-    icon: "/hacksec_logo.jpeg", // Optional: Favicon for metadata
-  },
 };
 
 export default function RootLayout({
@@ -36,9 +33,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         ></script>
 
-        {/* ✅ Favicon using hacksec_logo.jpeg */}
-        <link rel="icon" href="/hacksec_logo.jpeg" type="image/jpeg" sizes="32x32" />
-        <link rel="shortcut icon" href="/hacksec_logo.jpeg" type="image/jpeg" />
+        {/* ❌ Favicon removed */}
       </head>
       <body className={`${playfair.variable} ${inter.className}`}>
         {children}
