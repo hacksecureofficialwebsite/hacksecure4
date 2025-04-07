@@ -1,4 +1,5 @@
 import { Playfair_Display, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"; // ✅ Added Analytics
 import type React from "react";
 import "./globals.css";
 
@@ -35,6 +36,9 @@ export default function RootLayout({
       </head>
       <body className={`${playfair.variable} ${inter.className}`}>
         {children}
+
+        {/* ✅ Analytics component goes here */}
+        <Analytics />
       </body>
     </html>
   );
